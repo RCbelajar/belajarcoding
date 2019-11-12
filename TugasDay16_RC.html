@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tugas Day 16th</title>
+</head>
+<body>
+
+        <h1>SOLVE IT! #10</h1>
+
+            
+            <h3>1. Siapakah Presiden ketiga Republik Indonesia ?</h3>
+            <input id="soal1" type="radio" name="soal1" value="25">Prof.B.J.Habibie
+            <input id="soal1" type="radio" name="soal1" value="0">K.H.Abdurrahman Wahid
+            <input id="soal1" type="radio" name="soal1" value="0">Ir.Soekarno
+            <input id="soal1" type="radio" name="soal1" value="0">Joko Widodo
+
+            <h3>2. Berikut adalah nama-nama bahasa pemrograman, kecuali ...</h3>
+            <input id="soal2" type="radio" name="soal2" value="0">Python
+            <input id="soal2" type="radio" name="soal2" value="25">Micro:bit
+            <input id="soal2" type="radio" name="soal2" value="0">JavaScript
+            <input id="soal2" type="radio" name="soal2" value="0">HTML
+
+            <h3>3. Apa judul lagu yang diduga diplagiat oleh lagu 'Sayang' Via Vallen ?</h3>
+            <input id="soal3" type="radio" name="soal3" value="0">Qing Fei De Yi
+            <input id="soal3" type="radio" name="soal3" value="0">Ting Hai
+            <input id="soal3" type="radio" name="soal3" value="25">Mirai E Kiroro
+            <input id="soal3" type="radio" name="soal3" value="0">Hau Siang Hau Siang
+
+            <h3>4. Siapakah sosok di balik topeng Batman ?</h3>
+            <input id="soal4" type="radio" name="soal4" value="0">Natasha Romanov
+            <input id="soal4" type="radio" name="soal4" value="0">Peter Parker
+            <input id="soal4" type="radio" name="soal4" value="0">Tony Stark
+            <input id="soal4" type="radio" name="soal4" value="25">Bruce Wayne
+
+
+        <br>
+        <h3>Cek Nilai</h3>
+        <button onclick="cekNilai()">S U B M I T</button>
+        <h2><div id='checkout'></div></h2>
+
+
+    <script>
+    
+    function cekNilai(){
+
+        var hasil = 0
+
+        var jawab1 = document.getElementsByName("soal1")
+        var jawab2 = document.getElementsByName("soal2")
+        var jawab3 = document.getElementsByName("soal3")
+        var jawab4 = document.getElementsByName("soal4")
+        
+        for (var i = 0; i < jawab1.length; i++){ 
+            if (jawab1[i].checked){
+                jawab1 = parseInt(jawab1[i].value);
+            }
+        }
+        for (var i = 0; i < jawab2.length; i++){ 
+            if (jawab2[i].checked){
+                jawab2 = parseInt(jawab2[i].value);
+            }
+        }
+        for (var i = 0; i < jawab3.length; i++){ 
+            if (jawab3[i].checked){
+                jawab3 = parseInt(jawab3[i].value);
+            }
+        }
+        for (var i = 0; i < jawab4.length; i++){ 
+            if (jawab4[i].checked){
+                jawab4 = parseInt(jawab4[i].value);
+            }
+        }
+    hasil = jawab1 + jawab2 + jawab3 + jawab4
+    document.getElementById('checkout').innerHTML = 'Nilai akhir Anda ' + hasil
+    }
+
+    </script>
+
+</body>
+</html>
